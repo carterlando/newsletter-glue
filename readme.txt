@@ -7,7 +7,7 @@ Tags: newsletter, email, mailchimp, blog post
 Requires at least: 5.5
 Tested up to: 5.7
 Requires PHP: 7.0
-Stable Tag: 1.3.6.2
+Stable Tag: 1.3.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,6 +191,12 @@ Yes! Check it out [here](https://newsletterglue.com).
 10. Newsletter Group Block (for showing/hiding content in your email/blog)
 
 == Changelog ==
+
+= 1.3.6.4, October 23rd, 2024 =
+
+**Fixes**
+
+* Fixed Gutemberg compatibility up to v19.4.0
 
 = 1.3.6.2, July 1, 2021 =
 
