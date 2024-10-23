@@ -174,7 +174,9 @@
 			$( '.ngl-not-ready' ).removeClass( 'is-hidden' );
 			$( '.ngl-not-ready' ).parents( '.ngl-metabox-flex.alt3' ).addClass( 'ngl-unready' );
 			if ( $( '.ngl-newsletter-errors' ).length == 0 ) {
-				$( '.edit-post-header__settings' ).prepend( '<span class="ngl-newsletter-errors">' + newsletterglue_params.publish_error + '</span>' );
+				setTimeout(function() {
+					$( '.editor-header__settings' ).prepend( '<span class="ngl-newsletter-errors">' + newsletterglue_params.publish_error + '</span>' );
+				}, 500);
 			}
 			$( '.ngl-top-checkbox' ).addClass( 'disable-send' );
 			$( '#ngl_double_confirm' ).val( 'no' );
@@ -550,7 +552,9 @@
 	// Toggle metabox options.
 	$( document ).on( 'change', '#ngl_send_newsletter', function() {
 		if ( $( '.ngl-top-checkbox' ).length == 0 && $( '.ngl-no-connection' ).length == 0 && $( '.ngl-msgbox-wrap:visible' ).length == 0 && $( '.ngl-reset:visible' ).length == 0 ) {
-			$( '.edit-post-header__settings' ).prepend( '<div class="ngl-top-checkbox"><label><input type="checkbox" name="ngl_send_newsletter2" id="ngl_send_newsletter2" value="1">' + newsletterglue_params.send_newsletter + '</label></div>' );
+			setTimeout(function() {
+				$( '.editor-header__settings' ).prepend( '<div class="ngl-top-checkbox"><label><input type="checkbox" name="ngl_send_newsletter2" id="ngl_send_newsletter2" value="1">' + newsletterglue_params.send_newsletter + '</label></div>' );
+			}, 500);
 		}
 		ngl_validate_form();
 		if ( ! $( this ).is( ':checked' ) ) {
@@ -1179,7 +1183,9 @@
 	// When everything has finished loading.
 	$( window ).on( 'load', function() {
 		if ( $( '#ngl_send_newsletter' ).length && $( '.ngl-no-connection' ).length == 0 && $( '.ngl-msgbox-wrap:visible' ).length == 0 && $( '.ngl-reset:visible' ).length == 0 ) {
-			$( '.edit-post-header__settings' ).prepend( '<div class="ngl-top-checkbox"><label><input type="checkbox" name="ngl_send_newsletter2" id="ngl_send_newsletter2" value="1">' + newsletterglue_params.send_newsletter + '</label></div>' );
+			setTimeout(function() {
+				$( '.editor-header__settings' ).prepend( '<div class="ngl-top-checkbox"><label><input type="checkbox" name="ngl_send_newsletter2" id="ngl_send_newsletter2" value="1">' + newsletterglue_params.send_newsletter + '</label></div>' );
+			}, 500);
 		}
 		ngl_validate_email();
 
